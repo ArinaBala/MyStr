@@ -19,7 +19,7 @@ int main()
     cout << "Objects now: ";
     MyString::ShowCount();
 
-    ++a;          // Hello + пробел
+    ++a;          // Hello +
     a.Print();
 
     --a;         
