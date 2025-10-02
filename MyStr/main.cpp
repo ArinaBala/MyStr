@@ -4,15 +4,12 @@ using namespace std;
 
 int main()
 {
-   
-        MyString obj1{ 'H','e','l','l','o' };
-        obj1.Output(); // Выведет: Hello
+    MyString obj1{ 'H','e','l','l','o' };
+    obj1.Print(); // Hello
 
-        MyString obj2{ 'W','o','r','l','d' };
-        obj2.Output(); // Выведет: World
+    MyString obj2{ 'W','o','r','l','d' };
+    obj2.Print(); // World
 
-        return 0;
-    
     cout << "Objects before: ";
     MyString::ShowCount();
 
@@ -22,10 +19,10 @@ int main()
     cout << "Objects now: ";
     MyString::ShowCount();
 
-    ++a;          // Hello + ïðîáåë
+    ++a;          // Hello + пробел
     a.Print();
 
-    --a;          // óáðàëè ïîñëåäíèé ñèìâîë
+    --a;          // убрали последний символ
     a.Print();
 
     a += "world"; // Helloworld
@@ -49,10 +46,11 @@ int main()
     cout << "Objects after: ";
     MyString::ShowCount();
 
-    MyString a;
+    MyString c;
 
     cout << "Enter a string: ";
-    cin >> a;
-    cout << "You entered: " << a << endl;
+    cin >> c;
+    cout << "You entered: " << c << endl;
+
     return 0;
 }

@@ -2,24 +2,24 @@
 #include <cstring>
 using namespace std;
 
-// Конструктор с initializer_list в стиле «спп»
+// Конструктор с initializer_list 
 MyString::MyString(initializer_list<char> list)
 {
     cout << "Initializer_list constructor\n";
     cout << "Size of list: " << list.size() << endl;
 
-    size = list.size();               // получаем размер списка
-    data = new char[size + 1];        // выделяем память для символов + '\0'
+    size = list.size();              
+    data = new char[size + 1];        
 
-    char* ptr = data;                 // указатель на начало массива
-    for (auto it = list.begin(); it != list.end(); ++it) // перебор элементов
+    char* ptr = data;                 
+    for (auto it = list.begin(); it != list.end(); ++it) 
     {
-        *ptr = *it;                   // копируем элемент
-        ++ptr;                        // двигаем указатель
+        *ptr = *it;                   
+        ++ptr;                        
     }
 
-    *ptr = '\0';                      // ставим завершающий нуль
-    objectCounter++;                  // увеличиваем счетчик объектов
+    *ptr = '\0';                      
+    objectCounter++;                  
 }
 
 int MyString::objectCounter = 0;
