@@ -22,7 +22,7 @@ int main()
     ++a;          // Hello + пробел
     a.Print();
 
-    --a;          // убрали последний символ
+    --a;         
     a.Print();
 
     a += "world"; // Helloworld
